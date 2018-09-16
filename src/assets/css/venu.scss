@@ -1,13 +1,14 @@
 @import './vars.scss';
 
 .venu {
-  height: 90vh;
+  min-height: 90vh;
   background-color: white;
 
   main {
     width: $width;
     margin: 5% auto;
-    min-height: 75vh;
+
+    padding-bottom: 10vh;
 
   }
 

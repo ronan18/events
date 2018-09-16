@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
 import countDown from '@/components/countdown.vue'
 import alertMessage from '@/components/alert.vue'
 import event from '@/components/event.vue'

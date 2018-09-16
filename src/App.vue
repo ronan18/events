@@ -24,6 +24,7 @@
 <script>
 import 'minireset.css'
 import '@/assets/css/global.scss'
+
 export default {
   name: 'app',
   data() {

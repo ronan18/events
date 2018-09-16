@@ -35,6 +35,10 @@ export default new Router({
       path: '/a/:id',
       name: 'article',
       component: Article
+    },
+    {
+      path: '*',
+      redirect: '/a/404'
     }
   ]
 })

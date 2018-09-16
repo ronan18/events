@@ -1,25 +1,40 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-
+import Schedule from './views/schedule.vue'
+import Announcements from './views/announcements.vue'
+import Venue from './views/venue.vue'
+import Article from './views/article.vue'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/schedule',
+      name: 'schedule',
+      component: Schedule
+    },
+
+    {
+      path: '/announcements',
+      name: 'announcements',
+      component: Announcements
+    },
+    {
+      path: '/venue',
+      name: 'venue',
+      component: Venue
+    },
+    {
+      path: '/a/:id',
+      name: 'article',
+      component: Article
     }
   ]
 })

@@ -40,16 +40,22 @@ body,
 #app {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 10vh;
+  grid-template-rows: 90vh 10vh;
+  max-height: 100%;
 
 }
 
 .app__nav {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.6);
   padding: 1% $padding;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 99999;
+  background-color: white;
+  border-top: 1px #E5E5E5 solid;
 }
 
 .nav__link {
@@ -71,9 +77,24 @@ body,
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  position: fixed;
+  width: 100%;
 
   h1 {
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
+}
+
+.router {
+  overflow-y: scroll;
+  height: 90vh;
+  position: fixed;
+  margin-top: 2.3vh;
+
+}
+
+.spacer {
+  height: 3.5rem;
 }

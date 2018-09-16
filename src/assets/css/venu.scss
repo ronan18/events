@@ -1,0 +1,48 @@
+@import './vars.scss';
+
+.venu {
+  height: 90vh;
+  background-color: white;
+
+  main {
+    width: $width;
+    margin: 5% auto;
+    min-height: 75vh;
+
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .adress {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .map {
+    background: url("../map.jpg") no-repeat;
+    background-size: cover;
+    height: 38vh;
+    margin-bottom: 2%;
+    border-radius: $rounding;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  hr {
+    margin: 5% 0;
+  }
+
+  .contact {
+    color: $accent;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+  }
+}

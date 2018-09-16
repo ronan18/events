@@ -3,6 +3,14 @@
 .home {
   main {
     width: $width;
-    margin: 1% auto;
+    margin: 5% auto;
+    min-height: 75vh;
+    background-color: white;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 0.68rem;
+    margin-bottom: 2%;
   }
 }

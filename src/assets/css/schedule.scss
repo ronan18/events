@@ -1,0 +1,39 @@
+@import './vars.scss';
+
+.schedule {
+  background-color: $border;
+  height: 90vh;
+
+  main {
+    margin-top: 5%;
+    min-height: 75vh;
+
+    .scheduleItem {
+      height: 10vh;
+      background-color: white;
+      border-top: #E5E5E5 solid 1px;
+      border-bottom: #E5E5E5 solid 1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1% $padding;
+      text-decoration: none;
+      color: $primary;
+
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 400
+      }
+
+      p {
+        font-size: 0.6rem;
+        font-weight: 200;
+      }
+
+      i {
+        color: red;
+        font-size: 1rem;
+      }
+    }
+  }
+}

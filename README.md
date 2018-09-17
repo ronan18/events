@@ -1,4 +1,6 @@
-# sr-events
+# Events
+
+DOCUMENTATION COMMING SOON!
 
 ## Project setup
 ```

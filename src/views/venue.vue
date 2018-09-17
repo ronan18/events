@@ -13,8 +13,8 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illo hic laboriosam voluptates magnam culpa officiis? Veritatis necessitatibus assumenda enim accusamus est dolore voluptatum, natus accusantium, labore ipsa omnis eius.</p>
     <hr>
     <h2 class="title">Contact</h2>
-    <a class="contact" href="mailto:rsf.sho@gmail.com">rsf.sho@gmail.com</a>
-    <a class="contact" href="tel:5104092752">(510) 409-2752</a>
+    <a class="contact" href="mailto:rsf.sho@gmail.com">example@example.com</a>
+    <a class="contact" href="tel:1234567890">(123) 456-7890</a>
   </main>
 
 </div>

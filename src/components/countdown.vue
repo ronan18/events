@@ -42,7 +42,7 @@ export default {
         return 'loading'
       } else {
         if (dur.hours() > 0) {
-          return `${dur.hours()}h${dur.minutes()}m${dur.seconds()}s`
+          return `${dur.hours()}h${dur.minutes()}m`
         } else if(dur.minutes() > 0) {
           return `${dur.minutes()}m${dur.seconds()}s`
         } else if (dur.seconds() > 0) {

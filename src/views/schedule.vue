@@ -6,10 +6,10 @@
   </header>
     <div class="spacer"></div>
   <main>
-    <router-link to="/a/advancedjs" class="scheduleItem">
+    <router-link v-for="item in events" :key="item.link" :to="item.link" class="scheduleItem">
       <div>
-        <h1>Advanced JavaScript</h1>
-        <p>Saturday 10:00am-11:00am room 5</p>
+        <h1>{{item.title}}</h1>
+        <p>{{item.details}}</p>
       </div>
       <i class="material-icons">arrow_forward_ios</i>
     </router-link>
@@ -23,11 +23,23 @@ import countDown from '@/components/countdown.vue'
 import alertMessage from '@/components/alert.vue'
 import event from '@/components/event.vue'
 import '@/assets/css/schedule.scss'
+import firebase from 'firebase/app'
+import 'firebase/database'
 export default {
   name: 'schedule',
   components: {
     countDown: countDown,
 
+  },
+  data() {
+    return {
+      events: {}
+    }
+  },
+  mounted() {
+    firebase.database().ref('/schedule/').on('value', (snapshot) =>{
+      this.events = snapshot.val()
+    });
   }
 }
 </script>

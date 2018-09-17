@@ -4,7 +4,10 @@ import router from './router'
 import './registerServiceWorker'
 import firebase from 'firebase/app'
 import 'firebase/database'
-
+const VueTouch = require('vue-touch')
+Vue.use(VueTouch, {
+  name: 'v-touch'
+})
 const config = {
   apiKey: 'AIzaSyDo5AHR3LIJ7Xww5XiO7xnIj0u5KY5I4Wk',
   authDomain: 'events-8b686.firebaseapp.com',

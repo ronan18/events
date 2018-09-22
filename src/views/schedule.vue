@@ -6,7 +6,7 @@
   </header>
     <div class="spacer"></div>
   <main>
-    <router-link v-for="item in events" :key="item.link" :to="item.link" class="scheduleItem">
+    <router-link v-for="item in  sortedByTime" :key="item.link" :to="item.link" class="scheduleItem">
       <div>
         <h1>{{item.title}}</h1>
         <p>{{item.details}}</p>
@@ -25,6 +25,7 @@ import event from '@/components/event.vue'
 import '@/assets/css/schedule.scss'
 import firebase from 'firebase/app'
 import 'firebase/database'
+import moment from 'moment'
 export default {
   name: 'schedule',
   components: {
@@ -33,13 +34,24 @@ export default {
   },
   data() {
     return {
-      events: {}
+      events: []
     }
   },
   mounted() {
-    firebase.database().ref('/schedule/').on('value', (snapshot) =>{
-      this.events = snapshot.val()
-    });
+    firebase.database().ref('/schedule/').on('child_added', (snap) => {
+       let key = snap.key
+       let data = snap.val()    
+        
+          this.events.push(data) 
+                    
+    })
+  },
+  computed:{
+     sortedByTime(){
+        return this.events.sort((a,b) => {
+            return moment(a.time.start).diff(moment(b.time.start))
+    })
+  }
   }
 }
 </script>

@@ -4,6 +4,7 @@ import router from './router'
 import './registerServiceWorker'
 import firebase from 'firebase/app'
 import 'firebase/database'
+import 'firebase/messaging'
 const VueTouch = require('vue-touch')
 Vue.use(VueTouch, {
   name: 'v-touch'

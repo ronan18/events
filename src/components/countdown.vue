@@ -48,6 +48,7 @@ export default {
         } else if (dur.seconds() > 0) {
           return `${dur.seconds()}s`
         } else {
+          this.message = ''
           return `STARTED`
         }
         

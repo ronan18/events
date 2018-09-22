@@ -1,6 +1,6 @@
 # Events
 
-DOCUMENTATION COMMING SOON!
+DOCUMENTATION COMING SOON!
 
 ## Project setup
 ```
